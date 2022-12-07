@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   repository: nbgallery/nbgallery
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 
 imagePullSecrets: []
 nameOverride: ""

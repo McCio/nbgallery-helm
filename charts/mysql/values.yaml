@@ -2,14 +2,14 @@
 ## ref: https://hub.docker.com/r/library/mysql/tags/
 ##
 image: "mysql"
-imageTag: "5.7.30"
+imageTag: "5.7"
 
 strategy:
   type: Recreate
 
 busybox:
   image: "busybox"
-  tag: "1.32"
+  tag: "1.35"
 
 testFramework:
   enabled: true
