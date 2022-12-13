@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nbgallery-settings
+data:
+  settings.yaml: |
+    {{- toYaml .Values.settings | nindent 4 }}

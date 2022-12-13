@@ -140,6 +140,9 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /usr/src/nbgallery/data
+            - name: settings
+              mountPath: /usr/src/nbgallery/config/settings.yaml
+              subPath: settings.yaml
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -148,6 +151,9 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName:  {{ template "nbgallery.fullname" . }}-data
+        - name: settings
+          configMap:
+            name: nbgallery-settings
     {{- with .Values.affinity }}
       affinity:
         {{- toYaml . | nindent 8 }}

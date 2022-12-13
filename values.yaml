@@ -138,3 +138,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+settings:
+  anonymous_access: false
+  storage:
+    track_revisions: true
