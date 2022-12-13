@@ -141,7 +141,7 @@ spec:
             - name: data
               mountPath: /usr/src/nbgallery/data
             - name: settings
-              mountPath: /usr/src/nbgallery/config/settings.yaml
+              mountPath: /usr/src/nbgallery/config/settings.local.yml
               subPath: settings.yaml
       {{- with .Values.nodeSelector }}
       nodeSelector:
