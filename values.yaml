@@ -140,6 +140,22 @@ tolerations: []
 affinity: {}
 
 settings:
+  registration:
+    require_admin_approval: false
+    allowed_domains: ["@<COMPANY_DOMAIN>"]
   anonymous_access: false
   storage:
     track_revisions: true
+  reviews_enabled: true
+  reviews:
+    technical:
+      enabled: true
+      label: technical
+    functional:
+      enabled: true
+      label: functional
+    compliance:
+      enabled: true
+      label: compliance
+  user_permissions:
+    propose_review: true
